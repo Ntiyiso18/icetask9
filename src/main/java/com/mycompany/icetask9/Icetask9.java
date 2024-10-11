@@ -3,6 +3,9 @@
  */
 
 package com.mycompany.icetask9;
+import javax.swing.*;
+
+
 
 /**
  *
@@ -11,6 +14,58 @@ package com.mycompany.icetask9;
 public class Icetask9 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+             
+  
+       //declarations
+        int a, b;
+        String num1, num2;
+ //JOptionPane
+       num1 = JOptionPane.showInputDialog(null,"Input first number");
+       a = Integer.parseInt(num1);
+       
+        num2 = JOptionPane.showInputDialog(null,"Input second number");
+        b = Integer.parseInt(num2);
+         
+      
+      while (true){
+        String menu = """
+                      ======Menu=======
+                      1. addition
+                      2. subtration
+                      3. division
+                      4.multiplication
+                      0 Exit""";           
+                
+    
+String choice = JOptionPane.showInputDialog(menu);            
+        
+ 
+ 
+      switch (choice){
+          case "1": JOptionPane.showInputDialog(null," The sum of " + a + " & " + b + " is " + ( a + b ) );
+      break;
+          case "2":
+              JOptionPane.showInputDialog(null," The difference " + a + " & " + b + " is " + ( a - b ) );
+         break;    
+       case "3":
+              JOptionPane.showInputDialog(null," The quotient of " + a + " & " + b + " is " + ( a / b ) );
+         break;
+       case "4": 
+           JOptionPane.showInputDialog(null," The product of " + a + " & " + b + " is " + ( a * b ) );
+       case "0": 
+               JOptionPane.showInputDialog(null, "Exiting...");
+               System.exit(0);
+               break;
+      
+      }
+        
+      }
+      
+      
+      
+      
     }
 }
+
+    
+
